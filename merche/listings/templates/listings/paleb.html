@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>paleb</title>
+</head>
+<body>
+<h1>Hello Django !</h1>
+            <p>J'ai {{elementspaleb|length}}
+                {% if elementspaleb|length == 1%}
+                enregistrement
+                {%else%}
+                enregistrements
+                {%endif%}
+                dans la table paleb :</p>
+            <ul>
+                {% for elementpaleb in elementspaleb %}
+                <li>{{ elementpaleb.name|upper}}</li>
+                {% endfor %}
+            </ul>
+
+</body>
+</html>
